@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>事業内容 | 片倉兼太郎商会</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;700&family=EB+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .biz-item-sec { border-bottom: 1px solid var(--ash); }
+    .biz-item-sec:nth-child(odd) { background: var(--white); }
+    .biz-item-sec:nth-child(even) { background: var(--stone); }
+
+    .biz-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .biz-item.reverse { direction: rtl; }
+    .biz-item.reverse > * { direction: ltr; }
+
+    .biz-item-num {
+      font-family: 'EB Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.5em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    .biz-item-title {
+      font-size: clamp(22px, 2.8vw, 34px);
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .biz-item-body {
+      font-size: 14px;
+      line-height: 2.6;
+      color: var(--gray);
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+    .biz-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .biz-tag {
+      font-family: 'EB Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      border: 1px solid var(--ash);
+      padding: 3px 12px;
+      color: var(--gray);
+      text-transform: uppercase;
+    }
+    .biz-badge {
+      font-family: 'EB Garamond', serif;
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      border: 1px solid rgba(184,144,96,0.35);
+      padding: 2px 10px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+
+    /* Visual placeholder */
+    .biz-visual {
+      aspect-ratio: 4/3;
+      background: var(--ash);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .biz-visual::before {
+      content: '';
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(255,255,255,0.5);
+      pointer-events: none;
+    }
+    .biz-visual-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.45em;
+      color: rgba(100,95,90,0.5);
+      text-transform: uppercase;
+    }
+    .biz-visual-01 { background: #e8e3dc; }
+    .biz-visual-02 { background: #e0dbd4; }
+    .biz-visual-03 { background: #ddd8d1; }
+    .biz-visual-04 { background: #e4dfd8; }
+    .biz-visual-05 { background: #dbd6cf; }
+
+    @media (max-width: 900px) {
+      .biz-item, .biz-item.reverse { grid-template-columns: 1fr; direction: ltr; gap: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav is-scrolled" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会" class="nav-logo-crest"/>
+      <span class="nav-logo-jp">片倉兼太郎商会</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="about.html">会社概要</a></li>
+      <li><a href="history.html">沿革</a></li>
+      <li><a href="business.html">事業内容</a></li>
+      <li><a href="brand.html">ブランド</a></li>
+      <li><a href="news.html">ニュース</a></li>
+      <li><a href="contact.html" class="nav-contact">お問い合わせ</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">トップ</a>
+    <a href="about.html">会社概要</a>
+    <a href="history.html">沿革</a>
+    <a href="business.html">事業内容</a>
+    <a href="brand.html">ブランド</a>
+    <a href="news.html">ニュース</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-label">Business</span>
+    <h1 class="page-hero-title">事業内容</h1>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="biz-item-sec section" id="silk">
+  <div class="section-inner">
+    <div class="biz-item">
+      <div>
+        <span class="biz-item-num">01 — D2C Business</span>
+        <h2 class="biz-item-title">シルクパウダー事業</h2>
+        <p class="biz-item-body">
+          150年に渡るシルクの知見と、医師の視点から生まれた高純度シルクパウダー。
+          D2Cモデルによって直接お届けすることで、品質と価格を妥協なく両立します。<br/><br/>
+          フラッグシップブランド「玄盈（GENEI）」を核に、
+          妊活・美容・疲労回復・ウェルネス全般をテーマに展開。
+          sachet（スティック小袋）型で1包6g、日常のルーティーンに自然に溶け込む設計です。
+        </p>
+        <div class="biz-tags">
+          <span class="biz-tag">玄盈 GENEI</span>
+          <span class="biz-tag">シルクペプチド</span>
+          <span class="biz-tag">NMN配合</span>
+          <span class="biz-tag">医師監修</span>
+          <span class="biz-tag">D2C</span>
+        </div>
+      </div>
+      <div class="biz-visual biz-visual-01">
+        <span class="biz-visual-label">Silk D2C</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="biz-item-sec section" id="global">
+  <div class="section-inner">
+    <div class="biz-item reverse">
+      <div>
+        <span class="biz-item-num">02 — Global Partnership</span>
+        <h2 class="biz-item-title">海外展開事業</h2>
+        <p class="biz-item-body">
+          シンガポール・台湾を拠点とし、アジア市場への本格展開を推進。
+          現地パートナーとの連携により、日本品質のシルクウェルネスを世界へ届けます。<br/><br/>
+          Phase 1：台湾・香港での越境ECテスト<br/>
+          Phase 2：アジア主要国EC展開<br/>
+          Phase 3：欧州・中東への展開
+        </p>
+        <div class="biz-tags">
+          <span class="biz-tag">シンガポール</span>
+          <span class="biz-tag">台湾</span>
+          <span class="biz-tag">越境EC</span>
+          <span class="biz-tag">アジア展開</span>
+        </div>
+      </div>
+      <div class="biz-visual biz-visual-02">
+        <span class="biz-visual-label">Global</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="biz-item-sec section" id="btob">
+  <div class="section-inner">
+    <div class="biz-item">
+      <div>
+        <span class="biz-item-num">03 — Office Solution</span>
+        <h2 class="biz-item-title">BtoB オフィス事業</h2>
+        <p class="biz-item-body">
+          企業・法人向けにシルクパウダーの卸・OEM供給を行います。
+          従業員ウェルネスへの投資を、具体的な形にするソリューションです。<br/><br/>
+          健康経営を重視する企業の福利厚生として、
+          シルクパウダーの定期配送とウェルネスプログラムをセットでご提供。
+          ¥30〜¥50/人/日を目安に、企業規模に応じた柔軟なプランをご用意します。
+        </p>
+        <div class="biz-tags">
+          <span class="biz-tag">健康経営</span>
+          <span class="biz-tag">福利厚生</span>
+          <span class="biz-tag">OEM</span>
+          <span class="biz-tag">法人向け</span>
+        </div>
+      </div>
+      <div class="biz-visual biz-visual-03">
+        <span class="biz-visual-label">BtoB</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="biz-item-sec section" id="hospitality">
+  <div class="section-inner">
+    <div class="biz-item reverse">
+      <div>
+        <span class="biz-item-num">04 — Hospitality</span>
+        <h2 class="biz-item-title">体験・ホスピタリティ事業</h2>
+        <p class="biz-item-body">
+          日本の美意識とシルクウェルネスが融合した、唯一無二の体験を提供します。<br/><br/>
+          <strong>指月庵</strong>——旧諏訪藩庭園の数寄屋建築と日本庭園を舞台に、
+          シルクと静寂の時間をお届けする特別な空間。<br/><br/>
+          <strong>片倉シルクホテル</strong>——スモールラグジュアリーオーベルジュとして、
+          シルクウェルネスを日常に落とし込む滞在体験を提供。
+        </p>
+        <div class="biz-tags">
+          <span class="biz-tag">指月庵</span>
+          <span class="biz-tag">片倉シルクホテル</span>
+          <span class="biz-tag">体験設計</span>
+          <span class="biz-tag">OMO</span>
+        </div>
+      </div>
+      <div class="biz-visual biz-visual-04">
+        <span class="biz-visual-label">Hospitality</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="biz-item-sec section" id="ai">
+  <div class="section-inner">
+    <div class="biz-item">
+      <div>
+        <span class="biz-item-num">05 — Wellness Tech <span class="biz-badge">開発中</span></span>
+        <h2 class="biz-item-title">AI 健康生活支援システム</h2>
+        <p class="biz-item-body">
+          個々の健康データをAIが分析し、最適なウェルネスライフをパーソナライズ。
+          シルクパウダーとデジタル技術を融合させた次世代のウェルネスサポートを開発中です。<br/><br/>
+          医師監修のもと、ユーザーの体質・生活習慣・目標に応じた
+          最適な栄養とライフスタイルを提案。
+          「普通はこう」ではなく、「あなたにはこう」を届けるシステムを目指しています。
+        </p>
+        <div class="biz-tags">
+          <span class="biz-tag">AI</span>
+          <span class="biz-tag">パーソナライズ</span>
+          <span class="biz-tag">医師監修</span>
+          <span class="biz-tag">Wellness Tech</span>
+        </div>
+      </div>
+      <div class="biz-visual biz-visual-05">
+        <span class="biz-visual-label">AI · Tech</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会"/>
+      <div class="footer-logo-text">
+        <span class="footer-logo-jp">片倉兼太郎商会</span>
+        <span class="footer-logo-en">Katakura Kanetaro &amp; Co.</span>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <address class="footer-addr">
+          〒392-0002 長野県諏訪市湯の脇1丁目9-1<br/>
+          info@katakura-kanetaro.co.jp
+        </address>
+      </div>
+      <div>
+        <span class="footer-nav-label">Navigation</span>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="history.html">沿革</a></li>
+          <li><a href="business.html">事業内容</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-nav-label">Other</span>
+        <ul class="footer-nav-list">
+          <li><a href="brand.html">ブランド</a></li>
+          <li><a href="news.html">ニュース</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Katakura Kanetaro &amp; Co. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+  hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+  navMobile.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navMobile.classList.remove('open'));
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ブランド | 片倉兼太郎商会</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;700&family=EB+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── GENEI HERO ── */
+    .brand-hero-sec {
+      background: #0c0a08;
+      padding: 140px 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero-sec::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center 55%, rgba(184,144,96,0.05) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .brand-hero-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .brand-hero-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.65em;
+      color: rgba(184,144,96,0.85);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 3rem;
+    }
+    .brand-hero-title-jp {
+      font-size: clamp(52px, 8vw, 100px);
+      font-weight: 200;
+      letter-spacing: 0.35em;
+      color: rgba(255,255,255,0.82);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .brand-hero-title-en {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(18px, 3vw, 36px);
+      font-weight: 300;
+      letter-spacing: 0.55em;
+      color: rgba(184,144,96,0.88);
+      display: block;
+      margin-bottom: 3rem;
+    }
+    .brand-hero-gold {
+      width: 40px;
+      height: 1px;
+      background: rgba(184,144,96,0.3);
+      margin: 0 auto 3rem;
+    }
+    .brand-hero-catch {
+      font-size: 14px;
+      font-weight: 200;
+      letter-spacing: 0.35em;
+      color: rgba(255,255,255,0.65);
+      line-height: 2.8;
+    }
+
+    /* ── CONCEPT ── */
+    .concept-sec { background: var(--white); }
+    .concept-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+    .concept-heading {
+      font-size: clamp(24px, 3vw, 38px);
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      line-height: 1.9;
+      margin-top: 2rem;
+    }
+
+    /* ── FEATURES ── */
+    .feature-sec { background: var(--stone); }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 3rem;
+      background: var(--ash);
+    }
+    .feature-card {
+      background: var(--stone);
+      padding: 2.5rem 2rem;
+    }
+    .feature-num {
+      font-family: 'EB Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+    .feature-title {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+    }
+    .feature-body {
+      font-size: 13px;
+      line-height: 2.2;
+      color: var(--gray);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── PRODUCT ── */
+    .product-sec { background: var(--white); }
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .product-visual {
+      aspect-ratio: 1;
+      background: var(--stone);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .product-visual::before {
+      content: '';
+      position: absolute;
+      inset: 16px;
+      border: 1px solid var(--ash);
+    }
+    .product-visual-label {
+      font-family: 'EB Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      color: rgba(136,131,124,0.45);
+      text-transform: uppercase;
+    }
+    .product-name {
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      margin-bottom: 0.5rem;
+    }
+    .product-name-en {
+      font-family: 'EB Garamond', serif;
+      font-size: 13px;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+    .product-spec {
+      border-top: 1px solid var(--ash);
+      margin-top: 2rem;
+    }
+    .product-spec-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--ash);
+      font-size: 13px;
+    }
+    .product-spec-key { color: var(--gray); letter-spacing: 0.1em; }
+    .product-spec-val { letter-spacing: 0.06em; }
+
+    /* ── COMING SOON ── */
+    .coming-sec { background: var(--stone); }
+    .coming-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 3rem;
+      background: var(--ash);
+    }
+    .coming-card {
+      background: var(--stone);
+      padding: 2.5rem 2rem;
+    }
+    .coming-tag {
+      font-family: 'EB Garamond', serif;
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      color: var(--gray);
+      border: 1px solid var(--ash);
+      padding: 2px 8px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+    }
+    .coming-name {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.75rem;
+    }
+    .coming-body {
+      font-size: 13px;
+      line-height: 2.1;
+      color: var(--gray);
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 900px) {
+      .concept-layout, .product-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .feature-grid, .coming-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .feature-grid, .coming-grid { grid-template-columns: 1fr; }
+      .brand-hero-sec { padding: 100px 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav is-scrolled" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会" class="nav-logo-crest"/>
+      <span class="nav-logo-jp">片倉兼太郎商会</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="about.html">会社概要</a></li>
+      <li><a href="history.html">沿革</a></li>
+      <li><a href="business.html">事業内容</a></li>
+      <li><a href="brand.html">ブランド</a></li>
+      <li><a href="news.html">ニュース</a></li>
+      <li><a href="contact.html" class="nav-contact">お問い合わせ</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">トップ</a>
+    <a href="about.html">会社概要</a>
+    <a href="history.html">沿革</a>
+    <a href="business.html">事業内容</a>
+    <a href="brand.html">ブランド</a>
+    <a href="news.html">ニュース</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- GENEI BRAND HERO -->
+<div class="brand-hero-sec" style="padding-top: calc(72px + 4rem);">
+  <div class="brand-hero-inner">
+    <span class="brand-hero-label">Flagship Brand</span>
+    <span class="brand-hero-title-jp">玄　盈</span>
+    <span class="brand-hero-title-en">G E N E I</span>
+    <div class="brand-hero-gold"></div>
+    <p class="brand-hero-catch">
+      シルクの、奥へ。<br/>
+      からだの、深へ。
+    </p>
+  </div>
+</div>
+
+<!-- CONCEPT -->
+<section class="concept-sec section">
+  <div class="section-inner">
+    <div class="concept-layout">
+      <div>
+        <span class="section-label">Concept</span>
+        <h2 class="concept-heading">玄は「奥深い」、<br/>盈は「満ちる」。</h2>
+        <a href="contact.html" class="read-more">お問い合わせ</a>
+      </div>
+      <div>
+        <p class="section-body">
+          古来、シルクは「天の繊維」と称されてきました。
+          その繊細な光沢と肌触りは、美の象徴として世界中で愛されてきましたが、
+          私たちが注目したのは「食べるシルク」の可能性。<br/><br/>
+          高純度シルクフィブロインペプチドは、体内に吸収されると
+          コラーゲン産生を促進し、酸化ストレスを軽減。
+          妊活・アンチエイジング・疲労回復と、
+          からだの根本から整えるウェルネス素材です。<br/><br/>
+          玄盈は、150年の絹の知見と最先端の医学が出会った、
+          次世代のデイリーウェルネスブランドです。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="feature-sec section">
+  <div class="section-inner">
+    <span class="section-label">Features</span>
+    <h2 class="section-title">玄盈の特長</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="feature-num">— 01</span>
+        <h3 class="feature-title">高純度シルクペプチド</h3>
+        <p class="feature-body">フィブロインを酵素分解した低分子ペプチド。体内吸収率が高く、腸から直接取り込まれます。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-num">— 02</span>
+        <h3 class="feature-title">NMN配合</h3>
+        <p class="feature-body">ニコチンアミドモノヌクレオチドを配合。細胞レベルでのエネルギー産生をサポートします。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-num">— 03</span>
+        <h3 class="feature-title">医師監修</h3>
+        <p class="feature-body">産婦人科医師の監修のもと、科学的根拠に基づいて成分・配合量を設計しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section class="product-sec section">
+  <div class="section-inner">
+    <div class="product-layout">
+      <div class="product-visual">
+        <span class="product-visual-label">Product Image</span>
+      </div>
+      <div>
+        <span class="section-label">Product</span>
+        <h2 class="product-name">玄盈のパウダー</h2>
+        <span class="product-name-en">Genei Silk Powder</span>
+        <p class="section-body">
+          1日1包、水や温かい飲み物に溶かすだけ。
+          白く澄んだパウダーが、静かにからだの内側へ届きます。
+          無味無臭で、どんな飲み物にも馴染む毎日の習慣に。
+        </p>
+        <div class="product-spec">
+          <div class="product-spec-row">
+            <span class="product-spec-key">内容量</span>
+            <span class="product-spec-val">6g × 30包</span>
+          </div>
+          <div class="product-spec-row">
+            <span class="product-spec-key">主成分</span>
+            <span class="product-spec-val">シルクフィブロインペプチド、NMN</span>
+          </div>
+          <div class="product-spec-row">
+            <span class="product-spec-key">摂取方法</span>
+            <span class="product-spec-val">1日1包、水や飲み物に溶かして</span>
+          </div>
+          <div class="product-spec-row">
+            <span class="product-spec-key">製造</span>
+            <span class="product-spec-val">日本製・医師監修</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMING SOON -->
+<section class="coming-sec section">
+  <div class="section-inner">
+    <span class="section-label">Coming Soon</span>
+    <h2 class="section-title">展開予定ライン</h2>
+    <div class="coming-grid">
+      <div class="coming-card">
+        <span class="coming-tag">Fertility</span>
+        <h3 class="coming-name">妊活ライン</h3>
+        <p class="coming-body">卵子の質・子宮環境の改善をサポートする妊活特化フォーミュラ。</p>
+      </div>
+      <div class="coming-card">
+        <span class="coming-tag">Beauty</span>
+        <h3 class="coming-name">美容ライン</h3>
+        <p class="coming-body">コラーゲン・ヒアルロン酸との相乗効果で、肌の内側から整えるビューティーケア。</p>
+      </div>
+      <div class="coming-card">
+        <span class="coming-tag">Recovery</span>
+        <h3 class="coming-name">疲労回復ライン</h3>
+        <p class="coming-body">現代の疲労・ストレスに対応する、睡眠と回復のためのウェルネスフォーミュラ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会"/>
+      <div class="footer-logo-text">
+        <span class="footer-logo-jp">片倉兼太郎商会</span>
+        <span class="footer-logo-en">Katakura Kanetaro &amp; Co.</span>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <address class="footer-addr">
+          〒392-0002 長野県諏訪市湯の脇1丁目9-1<br/>
+          info@katakura-kanetaro.co.jp
+        </address>
+      </div>
+      <div>
+        <span class="footer-nav-label">Navigation</span>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="history.html">沿革</a></li>
+          <li><a href="business.html">事業内容</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-nav-label">Other</span>
+        <ul class="footer-nav-list">
+          <li><a href="brand.html">ブランド</a></li>
+          <li><a href="news.html">ニュース</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Katakura Kanetaro &amp; Co. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+  hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+  navMobile.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navMobile.classList.remove('open'));
+  });
+</script>
+</body>
+</html>

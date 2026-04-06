@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ニュース | 片倉兼太郎商会</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;700&family=EB+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav class="site-nav is-scrolled" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会" class="nav-logo-crest"/>
+      <span class="nav-logo-jp">片倉兼太郎商会</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="about.html">会社概要</a></li>
+      <li><a href="history.html">沿革</a></li>
+      <li><a href="business.html">事業内容</a></li>
+      <li><a href="brand.html">ブランド</a></li>
+      <li><a href="news.html">ニュース</a></li>
+      <li><a href="contact.html" class="nav-contact">お問い合わせ</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">トップ</a>
+    <a href="about.html">会社概要</a>
+    <a href="history.html">沿革</a>
+    <a href="business.html">事業内容</a>
+    <a href="brand.html">ブランド</a>
+    <a href="news.html">ニュース</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-label">News</span>
+    <h1 class="page-hero-title">ニュース</h1>
+  </div>
+</section>
+
+<section class="section" style="background: var(--white);">
+  <div class="section-inner" style="max-width: 840px;">
+    <span class="section-label">Latest News</span>
+    <div class="news-list">
+      <a href="#" class="news-item">
+        <span class="news-date">2026.03.01</span>
+        <span class="news-tag">News</span>
+        <span class="news-title">片倉兼太郎商会、コーポレートサイトを開設いたしました。</span>
+      </a>
+      <a href="#" class="news-item">
+        <span class="news-date">2026.03.01</span>
+        <span class="news-tag">Brand</span>
+        <span class="news-title">フラッグシップブランド「玄盈 GENEI」の販売を開始いたしました。</span>
+      </a>
+      <a href="#" class="news-item">
+        <span class="news-date">2026.02.01</span>
+        <span class="news-tag">IR</span>
+        <span class="news-title">株式会社片倉兼太郎商会を設立いたしました。</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会"/>
+      <div class="footer-logo-text">
+        <span class="footer-logo-jp">片倉兼太郎商会</span>
+        <span class="footer-logo-en">Katakura Kanetaro &amp; Co.</span>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <address class="footer-addr">
+          〒392-0002 長野県諏訪市湯の脇1丁目9-1<br/>
+          info@katakura-kanetaro.co.jp
+        </address>
+      </div>
+      <div>
+        <span class="footer-nav-label">Navigation</span>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="history.html">沿革</a></li>
+          <li><a href="business.html">事業内容</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-nav-label">Other</span>
+        <ul class="footer-nav-list">
+          <li><a href="brand.html">ブランド</a></li>
+          <li><a href="news.html">ニュース</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Katakura Kanetaro &amp; Co. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+  hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+  navMobile.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navMobile.classList.remove('open'));
+  });
+</script>
+</body>
+</html>

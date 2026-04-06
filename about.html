@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>会社概要 | 片倉兼太郎商会</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;700&family=EB+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── CEO ── */
+    .ceo-sec { background: var(--white); }
+    .ceo-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .ceo-photo {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      background: var(--stone);
+    }
+    .ceo-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ceo-label {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      display: block;
+    }
+    .ceo-quote {
+      font-size: clamp(17px, 2.2vw, 22px);
+      font-weight: 400;
+      line-height: 2;
+      letter-spacing: 0.08em;
+      margin-bottom: 2.5rem;
+    }
+    .ceo-divider {
+      width: 32px;
+      height: 1px;
+      background: var(--ash);
+      margin: 2rem 0;
+    }
+    .ceo-name {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      margin-bottom: 0.5rem;
+    }
+    .ceo-name-en {
+      font-family: 'EB Garamond', serif;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      color: var(--gray);
+    }
+    .ceo-bio {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 2.4;
+      color: var(--gray);
+      margin-top: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── VISION ── */
+    .vision-sec { background: var(--black); color: var(--white); }
+    .vision-heading {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: clamp(28px, 4.5vw, 56px);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+    .vision-jp {
+      text-align: center;
+      font-size: clamp(15px, 1.8vw, 20px);
+      font-weight: 200;
+      letter-spacing: 0.3em;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 5rem;
+    }
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      border-left: 1px solid rgba(255,255,255,0.07);
+    }
+    .value-card {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .value-num {
+      font-family: 'EB Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+    .value-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .value-body {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 2;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── PROFILE ── */
+    .profile-sec { background: var(--stone); }
+    .profile-table { border-top: 1px solid var(--ash); }
+    .profile-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--ash);
+      gap: 3rem;
+    }
+    .profile-row:last-child { border-bottom: none; }
+    .profile-key {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      color: var(--gray);
+    }
+    .profile-val {
+      font-size: 14px;
+      line-height: 2.2;
+      color: var(--black);
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 900px) {
+      .ceo-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .ceo-photo { aspect-ratio: 3/2; }
+      .value-grid { grid-template-columns: 1fr 1fr; }
+      .profile-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    }
+    @media (max-width: 640px) {
+      .value-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav is-scrolled" id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会" class="nav-logo-crest"/>
+      <span class="nav-logo-jp">片倉兼太郎商会</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="about.html">会社概要</a></li>
+      <li><a href="history.html">沿革</a></li>
+      <li><a href="business.html">事業内容</a></li>
+      <li><a href="brand.html">ブランド</a></li>
+      <li><a href="news.html">ニュース</a></li>
+      <li><a href="contact.html" class="nav-contact">お問い合わせ</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html">トップ</a>
+    <a href="about.html">会社概要</a>
+    <a href="history.html">沿革</a>
+    <a href="business.html">事業内容</a>
+    <a href="brand.html">ブランド</a>
+    <a href="news.html">ニュース</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-label">Company Profile</span>
+    <h1 class="page-hero-title">会社概要</h1>
+  </div>
+</section>
+
+<!-- CEO GREETING -->
+<section class="ceo-sec section">
+  <div class="section-inner">
+    <div class="ceo-layout">
+      <div class="ceo-photo">
+        <img src="images/katakura_yoshitaka.png" alt="代表取締役 片倉 好敬"/>
+      </div>
+      <div>
+        <span class="ceo-label">CEO Greeting</span>
+        <blockquote class="ceo-quote">
+          「歴史を保存するのではなく、<br/>
+          経営によって更新する。<br/>
+          シルクを次の100年の<br/>
+          食の基本とするために。」
+        </blockquote>
+        <div class="ceo-divider"></div>
+        <p class="ceo-name">代表取締役　片倉 好敬</p>
+        <p class="ceo-name-en">Representative Director — KATAKURA Yoshinori</p>
+        <p class="ceo-bio">
+          私たちは、これまでの150年を大切にしながらも、<br/>
+          その伝統に甘んじることなく、常に新しい価値を<br/>
+          社会に提供し続けることを使命としています。<br/><br/>
+          シルクという素材が持つ無限の可能性を、<br/>
+          最先端の科学とデザイン経営で昇華させ、<br/>
+          次世代のウェルネススタンダードを<br/>
+          構築してまいります。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION / VALUE -->
+<section class="vision-sec section">
+  <div class="section-inner">
+    <span class="section-label" style="color:rgba(184,144,96,0.85); justify-content:center; display:flex;">Vision &amp; Values</span>
+    <h2 class="vision-heading">"Not to add, but to fulfill."</h2>
+    <p class="vision-jp">足すのではなく、満たす。</p>
+    <div class="value-grid">
+      <div class="value-card">
+        <span class="value-num">— 01</span>
+        <h3 class="value-title">User-centric</h3>
+        <p class="value-body">常にお客様の視点に立ち、真に求められる価値を追求します。</p>
+      </div>
+      <div class="value-card">
+        <span class="value-num">— 02</span>
+        <h3 class="value-title">Medical Collaboration</h3>
+        <p class="value-body">医療・科学的根拠に基づいた製品開発で、健やかな暮らしを支えます。</p>
+      </div>
+      <div class="value-card">
+        <span class="value-num">— 03</span>
+        <h3 class="value-title">Experience Value</h3>
+        <p class="value-body">モノとしての価値を超え、記憶に残る体験価値を創造します。</p>
+      </div>
+      <div class="value-card">
+        <span class="value-num">— 04</span>
+        <h3 class="value-title">Design Management</h3>
+        <p class="value-body">デザインを経営の核に据え、一貫したブランド価値を構築します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPORATE PROFILE -->
+<section class="profile-sec section">
+  <div class="section-inner" style="max-width:840px;">
+    <span class="section-label">Corporate Profile</span>
+    <h2 class="section-title">企業情報</h2>
+    <div style="margin-top:3rem;">
+      <div class="profile-table">
+        <div class="profile-row">
+          <span class="profile-key">商号</span>
+          <span class="profile-val">株式会社片倉兼太郎商会（KATAKURA）</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">法人番号</span>
+          <span class="profile-val">7100001039186</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">代表者</span>
+          <span class="profile-val">代表取締役　片倉 好敬</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">設立</span>
+          <span class="profile-val">2026年</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">所在地</span>
+          <span class="profile-val">〒392-0002 長野県諏訪市湯の脇1丁目9-1</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">連絡先</span>
+          <span class="profile-val">info@katakura-kanetaro.co.jp</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">事業内容</span>
+          <span class="profile-val">シルクパウダーを核とした美容・健康・食・ライフスタイル領域のD2Cブランド事業、海外展開事業、BtoB事業、体験ホスピタリティ事業、AIによる健康生活支援事業</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-key">関連施設</span>
+          <span class="profile-val">
+            指月庵（旧諏訪藩庭園 数寄屋建築・日本庭園）<br/>
+            片倉シルクホテル（スモールラグジュアリーオーベルジュ）
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会"/>
+      <div class="footer-logo-text">
+        <span class="footer-logo-jp">片倉兼太郎商会</span>
+        <span class="footer-logo-en">Katakura Kanetaro &amp; Co.</span>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <address class="footer-addr">
+          〒392-0002 長野県諏訪市湯の脇1丁目9-1<br/>
+          info@katakura-kanetaro.co.jp
+        </address>
+      </div>
+      <div>
+        <span class="footer-nav-label">Navigation</span>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="history.html">沿革</a></li>
+          <li><a href="business.html">事業内容</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-nav-label">Other</span>
+        <ul class="footer-nav-list">
+          <li><a href="brand.html">ブランド</a></li>
+          <li><a href="news.html">ニュース</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Katakura Kanetaro &amp; Co. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+  hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+  navMobile.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navMobile.classList.remove('open'));
+  });
+</script>
+</body>
+</html>
