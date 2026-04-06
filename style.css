@@ -175,7 +175,7 @@ body {
 }
 .page-hero-title {
   font-size: clamp(30px, 4vw, 56px);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.22em;
   color: var(--white);
   line-height: 1.4;
