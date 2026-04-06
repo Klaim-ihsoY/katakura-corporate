@@ -71,21 +71,21 @@
   object-fit: contain;
   filter: invert(1);
   opacity: 0.95;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.6rem;
 }
 .hero-gold-bar {
   width: 1px;
-  height: 36px;
+  height: 24px;
   background: linear-gradient(to bottom, transparent, rgba(184,144,96,0.45), transparent);
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.75rem;
 }
 .hero-name-jp {
-  font-size: clamp(20px, 2.8vw, 32px);
-  font-weight: 300;
-  letter-spacing: 0.55em;
-  color: rgba(255,255,255,0.96);
+  height: clamp(38px, 5.2vw, 62px);
+  width: auto;
   display: block;
-  margin-bottom: 1rem;
+  filter: invert(1);
+  opacity: 0.96;
+  margin-bottom: 0.85rem;
 }
 .hero-name-en {
   font-family: 'EB Garamond', serif;
@@ -350,7 +350,7 @@
 }
 @media (max-width: 640px) {
   .hero-crest { width: 140px; height: 140px; }
-  .hero-name-jp { letter-spacing: 0.3em; font-size: 18px; }
+  .hero-name-jp { height: 28px; }
   .hero-name-en { letter-spacing: 0.15em; font-size: 9px; }
   .hero-catch { letter-spacing: 0.08em; line-height: 2.2; font-size: 12px; }
   .genei-sec { padding: 80px 1.5rem; }
@@ -368,8 +368,8 @@
 <nav class="site-nav" id="site-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会" class="nav-logo-crest"/>
-      <span class="nav-logo-jp">片倉兼太郎商会</span>
+      <img src="images/logo-katakura-just-logo.png" alt="片倉兼太郎商会" class="nav-logo-crest"/>
+      <img src="images/logo-katakura-text-only.png" alt="片倉兼太郎商会" class="nav-logo-jp"/>
     </a>
     <ul class="nav-menu">
       <li><a href="index.html">トップ</a></li>
@@ -404,9 +404,9 @@
     <span class="hero-frame-right"></span>
   </div>
   <div class="hero-center">
-    <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会 家紋" class="hero-crest"/>
+    <img src="images/logo-katakura-just-logo.png" alt="片倉兼太郎商会 家紋" class="hero-crest"/>
     <div class="hero-gold-bar"></div>
-    <span class="hero-name-jp">片倉兼太郎商会</span>
+    <img src="images/logo-katakura-text-only.png" alt="片倉兼太郎商会" class="hero-name-jp"/>
     <span class="hero-name-en">Katakura Kanetaro &amp; Co.</span>
     <p class="hero-catch">シルクの潜在能力を、あなたの美と健康に。</p>
   </div>
@@ -454,7 +454,7 @@
         <a href="history.html" class="read-more">View History</a>
       </div>
       <figure>
-        <img src="images/tomioka_silk_mill.jpg" alt="富岡製糸場 繰糸場で働く工女ら" class="legacy-photo"/>
+        <img src="images/tomioka-silk-mill.jpg" alt="富岡製糸場 繰糸場で働く工女ら" class="legacy-photo"/>
         <figcaption class="legacy-photo-caption">
           原合名会社が運営していた頃に撮影された繰糸所で働く工女ら<br/>
           絵葉書「原 富岡製絲所 繰糸場（其一部）」＝画像提供：富岡市・富岡製糸場
@@ -558,9 +558,9 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="logo_katakura_just_logo.png" alt="片倉兼太郎商会"/>
+      <img src="images/logo-katakura-just-logo.png" alt="片倉兼太郎商会"/>
       <div class="footer-logo-text">
-        <span class="footer-logo-jp">片倉兼太郎商会</span>
+        <img src="images/logo-katakura-text-only.png" alt="片倉兼太郎商会" class="footer-logo-jp"/>
         <span class="footer-logo-en">Katakura Kanetaro &amp; Co.</span>
       </div>
     </div>
