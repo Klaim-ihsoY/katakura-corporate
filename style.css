@@ -68,10 +68,11 @@ body {
 .site-nav:not(.is-scrolled) .nav-logo-crest { filter: invert(1); opacity: 0.8; }
 .site-nav.is-scrolled .nav-logo-crest { mix-blend-mode: multiply; }
 .nav-logo-jp {
-  font-size: 15px;
+  font-size: clamp(12px, 1.2vw, 15px);
   font-weight: 400;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.18em;
   line-height: 1;
+  white-space: nowrap;
   transition: color 0.5s;
 }
 .site-nav:not(.is-scrolled) .nav-logo-jp { color: rgba(255,255,255,0.9); }
@@ -379,6 +380,12 @@ body {
 .news-more:hover::after { width: 64px; }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 1240px) {
+  .nav-inner { padding: 0 2rem; }
+  .nav-logo { gap: 0.5rem; }
+  .nav-menu { gap: 1.8rem; }
+  .nav-menu a { letter-spacing: 0.16em; }
+}
 @media (max-width: 1024px) {
   .nav-menu { display: none; }
   .nav-hamburger { display: flex; }
