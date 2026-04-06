@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap');
-
 /* =============================================
    片倉兼太郎商会 v2
    Design: 本格京都和風
@@ -55,7 +53,7 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.75rem;
   transition: opacity 0.3s;
 }
 .nav-logo:hover { opacity: 0.65; }
@@ -70,13 +68,14 @@ body {
 .site-nav:not(.is-scrolled) .nav-logo-crest { filter: invert(1); opacity: 0.8; }
 .site-nav.is-scrolled .nav-logo-crest { mix-blend-mode: multiply; }
 .nav-logo-jp {
-  height: 22px;
-  width: auto;
-  display: block;
-  transition: filter 0.5s, opacity 0.5s;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  line-height: 1;
+  transition: color 0.5s;
 }
-.site-nav:not(.is-scrolled) .nav-logo-jp { filter: invert(1); opacity: 0.85; }
-.site-nav.is-scrolled .nav-logo-jp { filter: none; opacity: 1; }
+.site-nav:not(.is-scrolled) .nav-logo-jp { color: rgba(255,255,255,0.9); }
+.site-nav.is-scrolled .nav-logo-jp { color: var(--black); }
 
 .nav-menu {
   display: flex;
@@ -250,28 +249,21 @@ body {
   padding-bottom: 60px;
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
-.footer-logo > img {
-  height: 84px;
-  width: 84px;
+.footer-logo img {
+  height: 42px;
+  width: 42px;
   object-fit: contain;
   filter: invert(1);
   opacity: 0.45;
   flex-shrink: 0;
 }
-.footer-logo-text {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: flex-start;
-  min-height: 84px;
-  justify-content: center;
-}
-.footer-logo .footer-logo-jp {
-  height: 38px;
-  width: auto;
-  display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+.footer-logo-text { display: flex; flex-direction: column; gap: 5px; }
+.footer-logo-jp {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.7);
+  line-height: 1;
 }
 .footer-logo-en {
   font-family: 'EB Garamond', serif;
@@ -280,8 +272,6 @@ body {
   color: var(--gold);
   line-height: 1;
   text-transform: uppercase;
-  display: block;
-  margin-left: 4px;
 }
 .footer-grid {
   display: grid;
