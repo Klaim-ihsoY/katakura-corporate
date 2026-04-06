@@ -68,7 +68,7 @@ body {
 .site-nav:not(.is-scrolled) .nav-logo-crest { filter: invert(1); opacity: 0.8; }
 .site-nav.is-scrolled .nav-logo-crest { mix-blend-mode: multiply; }
 .nav-logo-jp {
-  height: 16px;
+  height: 20px;
   width: auto;
   display: block;
   flex-shrink: 0;
