@@ -259,7 +259,7 @@ body {
 }
 .footer-logo-text { display: flex; flex-direction: column; gap: 5px; }
 .footer-logo-jp {
-  height: 26px;
+  height: 48px;
   width: auto;
   display: block;
   filter: brightness(0) invert(1);
