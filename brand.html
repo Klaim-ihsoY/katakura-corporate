@@ -39,23 +39,13 @@
       display: block;
       margin-bottom: 3rem;
     }
-    .brand-hero-title-jp {
-      font-size: clamp(52px, 8vw, 100px);
-      font-weight: 200;
-      letter-spacing: 0.35em;
-      color: rgba(255,255,255,0.82);
+    .brand-hero-logo {
+      width: clamp(220px, 40vw, 380px);
+      height: auto;
       display: block;
-      line-height: 1;
-      margin-bottom: 0.75rem;
-    }
-    .brand-hero-title-en {
-      font-family: 'EB Garamond', serif;
-      font-size: clamp(18px, 3vw, 36px);
-      font-weight: 300;
-      letter-spacing: 0.55em;
-      color: rgba(184,144,96,0.88);
-      display: block;
-      margin-bottom: 3rem;
+      margin: 0 auto 3rem;
+      filter: brightness(0) invert(1);
+      opacity: 0.88;
     }
     .brand-hero-gold {
       width: 40px;
@@ -64,11 +54,11 @@
       margin: 0 auto 3rem;
     }
     .brand-hero-catch {
-      font-size: 14px;
-      font-weight: 200;
-      letter-spacing: 0.35em;
-      color: rgba(255,255,255,0.65);
-      line-height: 2.8;
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      color: rgba(255,255,255,0.92);
+      line-height: 2.4;
     }
 
     /* ── CONCEPT ── */
@@ -263,8 +253,7 @@
 <div class="brand-hero-sec" style="padding-top: calc(72px + 4rem);">
   <div class="brand-hero-inner">
     <span class="brand-hero-label">Flagship Brand</span>
-    <span class="brand-hero-title-jp">玄　盈</span>
-    <span class="brand-hero-title-en">G E N E I</span>
+    <img src="logo_genei.png" alt="玄盈 GENEI" class="brand-hero-logo"/>
     <div class="brand-hero-gold"></div>
     <p class="brand-hero-catch">
       はじめよう。<br/>
@@ -280,19 +269,19 @@
     <div class="concept-layout">
       <div>
         <span class="section-label">Concept</span>
-        <h2 class="concept-heading">玄は「奥深い」、<br/>盈は「満ちる」。</h2>
+        <h2 class="concept-heading">見えない基盤が、<br/>静かに満ちていく。</h2>
         <a href="contact.html" class="read-more">お問い合わせ</a>
       </div>
       <div>
         <p class="section-body">
-          古来、シルクは「天の繊維」と称されてきました。
-          その繊細な光沢と肌触りは、美の象徴として世界中で愛されてきましたが、
-          私たちが注目したのは「食べるシルク」の可能性。<br/><br/>
-          高純度シルクフィブロインペプチドは、体内に吸収されると
-          コラーゲン産生を促進し、酸化ストレスを軽減。
-          妊活・アンチエイジング・疲労回復と、
-          からだの根本から整えるウェルネス素材です。<br/><br/>
-          玄盈は、150年の絹の知見と最先端の医学が出会った、
+          玄は「奥深い・見えない基盤」、盈は「満ちる・巡る」。<br/>
+          GENEIは、からだの内側にある自己調整力——「ボディOS」を整えるブランドです。<br/><br/>
+          現代は、睡眠不足・慢性ストレス・栄養の偏りによって、
+          からだの基本システムが乱れています。
+          サプリメントを「足す」のではなく、
+          本来の働きを「取り戻す」ことを設計思想としています。<br/><br/>
+          シルクペプチドを核に、医師の視点で成分バランスを設計。
+          日常のルーティーンに静かに溶け込む、
           次世代のデイリーウェルネスブランドです。
         </p>
       </div>
@@ -304,22 +293,22 @@
 <section class="feature-sec section">
   <div class="section-inner">
     <span class="section-label">Features</span>
-    <h2 class="section-title">玄盈の特長</h2>
+    <h2 class="section-title">GENEIの設計思想</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <span class="feature-num">— 01</span>
-        <h3 class="feature-title">高純度シルクペプチド</h3>
-        <p class="feature-body">フィブロインを酵素分解した低分子ペプチド。体内吸収率が高く、腸から直接取り込まれます。</p>
+        <h3 class="feature-title">足すのではなく、整える</h3>
+        <p class="feature-body">成分の多さではなく、からだの自己調整力を引き出すバランス設計。ボディOSを取り戻すことを目的としています。</p>
       </div>
       <div class="feature-card">
         <span class="feature-num">— 02</span>
-        <h3 class="feature-title">NMN配合</h3>
-        <p class="feature-body">ニコチンアミドモノヌクレオチドを配合。細胞レベルでのエネルギー産生をサポートします。</p>
+        <h3 class="feature-title">シルクペプチドを核に</h3>
+        <p class="feature-body">150年の蚕糸の知見から生まれた高純度シルクペプチドを中心成分に。吸収率が高く、からだの内側から働きかけます。</p>
       </div>
       <div class="feature-card">
         <span class="feature-num">— 03</span>
-        <h3 class="feature-title">医師監修</h3>
-        <p class="feature-body">産婦人科医師の監修のもと、科学的根拠に基づいて成分・配合量を設計しています。</p>
+        <h3 class="feature-title">医師監修・体感重視</h3>
+        <p class="feature-body">産婦人科医師の監修のもと設計。「数値より体感」を重視し、日常の中で実際に変化を感じられる処方を追求します。</p>
       </div>
     </div>
   </div>
@@ -373,17 +362,17 @@
       <div class="coming-card">
         <span class="coming-tag">Coming Soon</span>
         <h3 class="coming-name">妊活ライン</h3>
-        <p class="coming-body">卵子の質・子宮環境の改善をサポートする妊活特化フォーミュラ。近日公開予定。</p>
+        <p class="coming-body">卵子の質・ホルモンバランス・子宮環境を総合的にサポートする妊活特化フォーミュラ。医師監修・近日公開予定。</p>
       </div>
       <div class="coming-card">
-        <span class="coming-tag">Beauty</span>
-        <h3 class="coming-name">美容ライン</h3>
-        <p class="coming-body">コラーゲン・ヒアルロン酸との相乗効果で、肌の内側から整えるビューティーケア。</p>
+        <span class="coming-tag">Coming Soon</span>
+        <h3 class="coming-name">ウェルネスライン</h3>
+        <p class="coming-body">日々の疲労・睡眠・肌コンディションなど、現代の悪循環を断ち切るためのベーシックケアライン。</p>
       </div>
       <div class="coming-card">
-        <span class="coming-tag">Recovery</span>
-        <h3 class="coming-name">疲労回復ライン</h3>
-        <p class="coming-body">現代の疲労・ストレスに対応する、睡眠と回復のためのウェルネスフォーミュラ。</p>
+        <span class="coming-tag">Coming Soon</span>
+        <h3 class="coming-name">グローバルライン</h3>
+        <p class="coming-body">海外向けに設計された和のウェルネス体験。日本の伝統食材とシルクを組み合わせた国際展開プロダクト。</p>
       </div>
     </div>
   </div>
