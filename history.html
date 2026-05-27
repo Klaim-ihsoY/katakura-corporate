@@ -77,20 +77,31 @@
       text-transform: uppercase;
       display: block;
       margin-bottom: 2rem;
-      margin-left: -160px;
-      padding-left: 0;
       position: relative;
+      /* 縦線の右側（コンテンツエリア）に配置 — テキストが線と被らない */
+      padding-left: 1.5rem;
     }
+    .timeline-era-label::before {
+      /* 縦線上にドットを配置 (コンテンツ開始 160px − 縦線 100px = 60px 戻す) */
+      content: '';
+      position: absolute;
+      left: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+    /* 縦線からラベルまでの短い水平ブリッジ */
     .timeline-era-label::after {
       content: '';
       position: absolute;
-      left: 100px;
+      left: -56px;
       top: 50%;
-      transform: translateY(-50%);
-      width: 6px;
-      height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
+      width: 56px;
+      height: 1px;
+      background: rgba(184,144,96,0.35);
     }
     .timeline-item {
       display: grid;
@@ -147,8 +158,10 @@
     @media (max-width: 640px) {
       .timeline { padding-left: 80px; }
       .timeline::before { left: 50px; }
-      .timeline-era-label { margin-left: -80px; padding-left: 64px; }
-      .timeline-era-label::after { left: 50px; }
+      /* モバイル: コンテンツ開始 80px − 縦線 50px = 30px 戻す */
+      .timeline-era-label { padding-left: 1rem; }
+      .timeline-era-label::before { left: -30px; width: 6px; height: 6px; }
+      .timeline-era-label::after { left: -26px; width: 26px; }
       .timeline-item { grid-template-columns: 50px 1fr; gap: 1.5rem; margin-left: -30px; }
       .timeline-item::before { left: 0; }
       .timeline-year { font-size: 12px; }
@@ -164,125 +177,106 @@
       <img src="assets/logos/text.png" alt="片倉兼太郎商会" class="nav-logo-jp"/>
     </a>
     <ul class="nav-menu">
-      <li><a href="index.html">トップ</a></li>
-      <li><a href="about.html">会社概要</a></li>
-      <li><a href="history.html">歩み</a></li>
-      <li><a href="business.html">事業内容</a></li>
-      <li><a href="brand.html">ブランド</a></li>
-      <li><a href="news.html">ニュース</a></li>
-      <li><a href="contact.html" class="nav-contact">お問い合わせ</a></li>
+      <li><a href="index.html" data-en="Top">トップ</a></li>
+      <li><a href="about.html" data-en="About">会社概要</a></li>
+      <li><a href="history.html" data-en="History">歩み</a></li>
+      <li><a href="business.html" data-en="Business">事業内容</a></li>
+      <li><a href="brand.html" data-en="Brand">ブランド</a></li>
+      <li><a href="news.html" data-en="News">ニュース</a></li>
+      <li><a href="contact.html" class="nav-contact" data-en="Contact">お問い合わせ</a></li>
     </ul>
+    <button class="lang-toggle" id="lang-toggle" aria-label="Language / 言語"><span class="lt-ja">JA</span><span class="lt-dot"> · </span><span class="lt-en">EN</span></button>
     <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav-mobile" id="nav-mobile">
-    <a href="index.html">トップ</a>
-    <a href="about.html">会社概要</a>
-    <a href="history.html">歩み</a>
-    <a href="business.html">事業内容</a>
-    <a href="brand.html">ブランド</a>
-    <a href="news.html">ニュース</a>
-    <a href="contact.html">お問い合わせ</a>
+    <a href="index.html" data-en="Top">トップ</a>
+    <a href="about.html" data-en="About">会社概要</a>
+    <a href="history.html" data-en="History">歩み</a>
+    <a href="business.html" data-en="Business">事業内容</a>
+    <a href="brand.html" data-en="Brand">ブランド</a>
+    <a href="news.html" data-en="News">ニュース</a>
+    <a href="contact.html" data-en="Contact">お問い合わせ</a>
+    <button class="lang-toggle" aria-label="Language / 言語"><span class="lt-ja">JA</span><span class="lt-dot"> · </span><span class="lt-en">EN</span></button>
   </div>
 </nav>
 
 <section class="page-hero">
   <div class="page-hero-inner">
     <span class="page-hero-label">History</span>
-    <h1 class="page-hero-title">歩み</h1>
+    <h1 class="page-hero-title" data-en="History">歩み</h1>
   </div>
 </section>
 
 <section class="timeline-sec section">
   <div class="section-inner">
     <span class="section-label">Heritage Since 1873</span>
-    <h2 class="section-title">片倉兼太郎商会の歩み</h2>
+    <h2 class="section-title" data-en="Our Journey">片倉兼太郎商会の歩み</h2>
 
     <div class="timeline">
 
       <!-- 明治 -->
       <div class="timeline-era">
-        <span class="timeline-era-label">Meiji Era 明治</span>
+        <span class="timeline-era-label" data-en="Meiji Era 明治">明治 Meiji Era</span>
 
         <div class="timeline-item">
           <span class="timeline-year">1873</span>
           <div class="timeline-content">
-            <span class="timeline-tag">創業</span>
-            <p class="timeline-title">信濃国諏訪にて創業</p>
-            <p class="timeline-body">片倉家による製糸事業を諏訪湖畔にて開始。日本有数の絹産地として発展する信州諏訪の礎を担う。</p>
+            <span class="timeline-tag" data-en="Origin">ルーツ</span>
+            <p class="timeline-title" data-en="The Katakura family begins silk-reeling in Suwa">片倉家、諏訪湖畔にて製糸事業を開始</p>
+            <p class="timeline-body" data-en="The Katakura family began silk-reeling operations on the shores of Lake Suwa. This heritage — carried forward through what would become Katakura Kogyo — forms the historical roots from which Katakura Kanetaro Shokai draws its identity.">片倉家が諏訪湖畔にて製糸業を興す。その後、片倉工業へと受け継がれた製糸の系譜が、片倉兼太郎商会が継承するシルクへの想いの源流となっている。</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <span class="timeline-year">1893</span>
           <div class="timeline-content">
-            <p class="timeline-title">富岡製糸場の関連事業に参画</p>
-            <p class="timeline-body">明治政府の肝いりで設立された富岡製糸場と連携し、日本の近代製糸業の発展を支える。</p>
+            <p class="timeline-title" data-en="Participation in Tomioka Silk Mill operations">富岡製糸場の関連事業に参画</p>
+            <p class="timeline-body" data-en="In partnership with the Tomioka Silk Mill, established under the Meiji government&#39;s initiative, the company supported the development of Japan&#39;s modern silk-reeling industry.">明治政府の肝いりで設立された富岡製糸場と連携し、日本の近代製糸業の発展を支える。</p>
           </div>
         </div>
       </div>
 
       <!-- 大正 -->
       <div class="timeline-era">
-        <span class="timeline-era-label">Taisho Era 大正</span>
+        <span class="timeline-era-label" data-en="Taisho Era 大正">大正 Taisho Era</span>
 
         <div class="timeline-item">
           <span class="timeline-year">1912</span>
           <div class="timeline-content">
-            <p class="timeline-title">製糸規模の拡大・輸出事業へ</p>
-            <p class="timeline-body">欧米向けの生糸輸出事業を本格化。日本のシルクを世界へと届ける商流を確立する。</p>
+            <p class="timeline-title" data-en="Expansion and entry into export business">製糸規模の拡大・輸出事業へ</p>
+            <p class="timeline-body" data-en="Export of raw silk to Europe and the United States was expanded in earnest, establishing a trade channel to deliver Japanese silk to the world.">欧米向けの生糸輸出事業を本格化。日本のシルクを世界へと届ける商流を確立する。</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <span class="timeline-year">1925</span>
           <div class="timeline-content">
-            <p class="timeline-title">機械製糸への転換完了</p>
-            <p class="timeline-body">近代的な機械製糸技術を全面導入し、品質と生産性の両立を実現。</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 昭和 -->
-      <div class="timeline-era">
-        <span class="timeline-era-label">Showa Era 昭和</span>
-
-        <div class="timeline-item">
-          <span class="timeline-year">1960</span>
-          <div class="timeline-content">
-            <p class="timeline-title">シルク研究部門を設立</p>
-            <p class="timeline-body">繊維としてのシルクにとどまらず、その生体機能性に着目した研究を開始。フィブロインたんぱく質の特性解明に着手する。</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <span class="timeline-year">1985</span>
-          <div class="timeline-content">
-            <p class="timeline-title">シルクパウダーの研究開発開始</p>
-            <p class="timeline-body">食用シルクパウダーの可能性を探る研究プロジェクトを立ち上げ。医学分野との連携を模索し始める。</p>
+            <p class="timeline-title" data-en="Completion of transition to mechanical silk reeling">機械製糸への転換完了</p>
+            <p class="timeline-body" data-en="Full adoption of modern mechanical silk-reeling technology achieved a balance of quality and productivity.">近代的な機械製糸技術を全面導入し、品質と生産性の両立を実現。</p>
           </div>
         </div>
       </div>
 
       <!-- 現代 -->
       <div class="timeline-era">
-        <span class="timeline-era-label">Present Era 現代</span>
+        <span class="timeline-era-label" data-en="Present Era 現代">現代 Present Era</span>
 
         <div class="timeline-item">
           <span class="timeline-year">2020</span>
           <div class="timeline-content">
-            <p class="timeline-title">医師との共同研究プロジェクト発足</p>
-            <p class="timeline-body">医学的エビデンスに基づくシルクパウダーの製品化に向け、医師との本格的な共同研究を開始。</p>
+            <p class="timeline-title" data-en="Launch of joint research with physicians">医師との共同研究プロジェクト発足</p>
+            <p class="timeline-body" data-en="Full-scale collaborative research with physicians began to commercialize silk powder based on medical evidence.">医学的エビデンスに基づくシルクパウダーの製品化に向け、医師との本格的な共同研究を開始。</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <span class="timeline-year">2026</span>
           <div class="timeline-content">
-            <span class="timeline-tag">現在</span>
-            <p class="timeline-title">株式会社片倉兼太郎商会として新たな出発</p>
-            <p class="timeline-body">150年の歴史と知見を礎に、現代のウェルネスニーズに応えるD2Cブランド「玄盈 GENEI」を発表。シルクの新時代へ踏み出す。</p>
+            <span class="timeline-tag" data-en="Present">現在</span>
+            <p class="timeline-title" data-en="A new beginning as Katakura Kanetaro Shokai Co., Ltd.">株式会社片倉兼太郎商会として新たな出発</p>
+            <p class="timeline-body" data-en="Building on 150 years of history and expertise, the D2C brand GENEI was launched to meet modern wellness needs. Stepping into a new era of silk.">150年の歴史と知見を礎に、現代のウェルネスニーズに応えるD2Cブランド「玄盈 GENEI」を発表。シルクの新時代へ踏み出す。</p>
           </div>
         </div>
       </div>
@@ -302,7 +296,7 @@
     </div>
     <div class="footer-grid">
       <div>
-        <address class="footer-addr">
+        <address class="footer-addr" data-en="1-9-1 Yunowaki, Suwa City, Nagano 392-0002, Japan&lt;br/&gt;info@katakura-kanetaro.co.jp">
           〒392-0002 長野県諏訪市湯の脇1丁目9-1<br/>
           info@katakura-kanetaro.co.jp
         </address>
@@ -310,19 +304,19 @@
       <div>
         <span class="footer-nav-label">Navigation</span>
         <ul class="footer-nav-list">
-          <li><a href="index.html">トップ</a></li>
-          <li><a href="about.html">会社概要</a></li>
-          <li><a href="history.html">歩み</a></li>
-          <li><a href="business.html">事業内容</a></li>
+          <li><a href="index.html" data-en="Top">トップ</a></li>
+          <li><a href="about.html" data-en="About">会社概要</a></li>
+          <li><a href="history.html" data-en="History">歩み</a></li>
+          <li><a href="business.html" data-en="Business">事業内容</a></li>
         </ul>
       </div>
       <div>
         <span class="footer-nav-label">Other</span>
         <ul class="footer-nav-list">
-          <li><a href="brand.html">ブランド</a></li>
-          <li><a href="news.html">ニュース</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="brand.html" data-en="Brand">ブランド</a></li>
+          <li><a href="news.html" data-en="News">ニュース</a></li>
+          <li><a href="contact.html" data-en="Contact">お問い合わせ</a></li>
+          <li><a href="privacy.html" data-en="Privacy Policy">プライバシーポリシー</a></li>
         </ul>
       </div>
     </div>
@@ -332,6 +326,7 @@
   </div>
 </footer>
 
+<script src="assets/js/lang.js"></script>
 <script>
   const hamburger = document.getElementById('hamburger');
   const navMobile = document.getElementById('nav-mobile');

@@ -155,33 +155,35 @@
       <img src="assets/logos/text.png" alt="片倉兼太郎商会" class="nav-logo-jp"/>
     </a>
     <ul class="nav-menu">
-      <li><a href="index.html">トップ</a></li>
-      <li><a href="about.html">会社概要</a></li>
-      <li><a href="history.html">歩み</a></li>
-      <li><a href="business.html">事業内容</a></li>
-      <li><a href="brand.html">ブランド</a></li>
-      <li><a href="news.html">ニュース</a></li>
-      <li><a href="contact.html" class="nav-contact">お問い合わせ</a></li>
+      <li><a href="index.html" data-en="Top">トップ</a></li>
+      <li><a href="about.html" data-en="About">会社概要</a></li>
+      <li><a href="history.html" data-en="History">歩み</a></li>
+      <li><a href="business.html" data-en="Business">事業内容</a></li>
+      <li><a href="brand.html" data-en="Brand">ブランド</a></li>
+      <li><a href="news.html" data-en="News">ニュース</a></li>
+      <li><a href="contact.html" class="nav-contact" data-en="Contact">お問い合わせ</a></li>
     </ul>
+    <button class="lang-toggle" id="lang-toggle" aria-label="Language / 言語"><span class="lt-ja">JA</span><span class="lt-dot"> · </span><span class="lt-en">EN</span></button>
     <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav-mobile" id="nav-mobile">
-    <a href="index.html">トップ</a>
-    <a href="about.html">会社概要</a>
-    <a href="history.html">歩み</a>
-    <a href="business.html">事業内容</a>
-    <a href="brand.html">ブランド</a>
-    <a href="news.html">ニュース</a>
-    <a href="contact.html">お問い合わせ</a>
+    <a href="index.html" data-en="Top">トップ</a>
+    <a href="about.html" data-en="About">会社概要</a>
+    <a href="history.html" data-en="History">歩み</a>
+    <a href="business.html" data-en="Business">事業内容</a>
+    <a href="brand.html" data-en="Brand">ブランド</a>
+    <a href="news.html" data-en="News">ニュース</a>
+    <a href="contact.html" data-en="Contact">お問い合わせ</a>
+    <button class="lang-toggle" aria-label="Language / 言語"><span class="lt-ja">JA</span><span class="lt-dot"> · </span><span class="lt-en">EN</span></button>
   </div>
 </nav>
 
 <section class="page-hero">
   <div class="page-hero-inner">
     <span class="page-hero-label">Business</span>
-    <h1 class="page-hero-title">事業内容</h1>
+    <h1 class="page-hero-title" data-en="Business">事業内容</h1>
   </div>
 </section>
 
@@ -191,8 +193,8 @@
     <div class="biz-item">
       <div>
         <span class="biz-item-num">01 — D2C Business</span>
-        <h2 class="biz-item-title">シルクパウダー事業</h2>
-        <p class="biz-item-body">
+        <h2 class="biz-item-title" data-en="Silk Powder Business">シルクパウダー事業</h2>
+        <p class="biz-item-body" data-en="A high-purity silk powder born from 150 years of silk expertise and a physician&#39;s perspective. Delivered directly via D2C, with no compromise on quality or price.<br/><br/>Anchored by flagship brand GENEI, the product range spans fertility support, beauty, recovery, and general wellness. In 6g sachet form, it is designed to blend naturally into daily routines.">
           150年に渡るシルクの知見と、医師の視点から生まれた高純度シルクパウダー。
           D2Cモデルによって直接お届けすることで、品質と価格を妥協なく両立します。<br/><br/>
           フラッグシップブランド「玄盈（GENEI）」を核に、
@@ -220,8 +222,8 @@
     <div class="biz-item reverse">
       <div>
         <span class="biz-item-num">02 — Global Partnership</span>
-        <h2 class="biz-item-title">海外展開事業</h2>
-        <p class="biz-item-body">
+        <h2 class="biz-item-title" data-en="Global Expansion">海外展開事業</h2>
+        <p class="biz-item-body" data-en="Advancing full-scale expansion into Asian markets based in Singapore and Taiwan. Through partnerships with local partners, we deliver Japanese-quality silk wellness to the world.<br/><br/>Phase 1: Cross-border e-commerce testing in Taiwan and Hong Kong<br/>Phase 2: E-commerce expansion across major Asian markets<br/>Phase 3: Expansion into Europe and the Middle East">
           シンガポール・台湾を拠点とし、アジア市場への本格展開を推進。
           現地パートナーとの連携により、日本品質のシルクウェルネスを世界へ届けます。<br/><br/>
           Phase 1：台湾・香港での越境ECテスト<br/>
@@ -248,20 +250,25 @@
     <div class="biz-item">
       <div>
         <span class="biz-item-num">03 — Hospitality</span>
-        <h2 class="biz-item-title">体験・ホスピタリティ事業</h2>
-        <p class="biz-item-body">
+        <h2 class="biz-item-title" data-en="Hospitality &amp; Experience">体験・ホスピタリティ事業</h2>
+        <p class="biz-item-body" data-en="We offer a one-of-a-kind experience where Japanese aesthetic sensibility and silk wellness converge.<br/><br/><strong>Shigetsuan</strong> — a special space set within the former Suwa Domain estate, where guests experience serenity through silk and silence in a sukiya-style architecture and Japanese garden.<br/><br/>Immersed in the nature of Suwa, Nagano, this venue allows guests to experience GENEI wellness with all five senses, forming an OMO model that circulates between online and offline.">
           日本の美意識とシルクウェルネスが融合した、唯一無二の体験を提供します。<br/><br/>
-          <strong>指月庵</strong>——旧諏訪藩庭園の数寄屋建築と日本庭園を舞台に、
-          シルクと静寂の時間をお届けする特別な空間。
+          <strong>指月庵</strong>——旧諏訪藩庭園に佇む数寄屋建築と日本庭園を舞台に、
+          シルクと静寂の時間をお届けする特別な空間。<br/><br/>
+          長野・諏訪の自然の中で、GENEIのウェルネスを五感で体験できる場として、
+          オンラインとオフラインを循環させるOMOモデルを構築します。
         </p>
         <div class="biz-tags">
           <span class="biz-tag">指月庵</span>
+          <span class="biz-tag">長野・諏訪</span>
           <span class="biz-tag">体験設計</span>
           <span class="biz-tag">OMO</span>
         </div>
       </div>
-      <div class="biz-visual biz-visual-04">
-        <span class="biz-visual-label">Hospitality</span>
+      <!-- 指月庵の写真を assets/images/shigetsuan.jpg に配置してください -->
+      <div class="biz-visual biz-visual-04" style="overflow:hidden; padding:0;">
+        <img src="assets/images/shigetsuan.jpg" alt="指月庵 — 長野・諏訪" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'; this.parentElement.querySelector('.biz-visual-label').style.display='block';" />
+        <span class="biz-visual-label" style="display:none; position:absolute;">指月庵</span>
       </div>
     </div>
   </div>
@@ -273,8 +280,8 @@
     <div class="biz-item reverse">
       <div>
         <span class="biz-item-num">04 — Wellness Tech <span class="biz-badge">開発中</span></span>
-        <h2 class="biz-item-title">AI 健康生活支援システム</h2>
-        <p class="biz-item-body">
+        <h2 class="biz-item-title" data-en="AI Wellness Support System">AI 健康生活支援システム</h2>
+        <p class="biz-item-body" data-en="AI analyzes individual health data to personalize the optimal wellness lifestyle. We are developing next-generation wellness support that fuses silk powder with digital technology.<br/><br/>Under physician supervision, the system recommends optimal nutrition and lifestyle plans tailored to each user&#39;s constitution, habits, and goals — delivering not &quot;this is the norm,&quot; but &quot;this is right for you.&quot;">
           個々の健康データをAIが分析し、最適なウェルネスライフをパーソナライズ。
           シルクパウダーとデジタル技術を融合させた次世代のウェルネスサポートを開発中です。<br/><br/>
           医師監修のもと、ユーザーの体質・生活習慣・目標に応じた
@@ -306,7 +313,7 @@
     </div>
     <div class="footer-grid">
       <div>
-        <address class="footer-addr">
+        <address class="footer-addr" data-en="1-9-1 Yunowaki, Suwa City, Nagano 392-0002, Japan&lt;br/&gt;info@katakura-kanetaro.co.jp">
           〒392-0002 長野県諏訪市湯の脇1丁目9-1<br/>
           info@katakura-kanetaro.co.jp
         </address>
@@ -314,19 +321,19 @@
       <div>
         <span class="footer-nav-label">Navigation</span>
         <ul class="footer-nav-list">
-          <li><a href="index.html">トップ</a></li>
-          <li><a href="about.html">会社概要</a></li>
-          <li><a href="history.html">歩み</a></li>
-          <li><a href="business.html">事業内容</a></li>
+          <li><a href="index.html" data-en="Top">トップ</a></li>
+          <li><a href="about.html" data-en="About">会社概要</a></li>
+          <li><a href="history.html" data-en="History">歩み</a></li>
+          <li><a href="business.html" data-en="Business">事業内容</a></li>
         </ul>
       </div>
       <div>
         <span class="footer-nav-label">Other</span>
         <ul class="footer-nav-list">
-          <li><a href="brand.html">ブランド</a></li>
-          <li><a href="news.html">ニュース</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="brand.html" data-en="Brand">ブランド</a></li>
+          <li><a href="news.html" data-en="News">ニュース</a></li>
+          <li><a href="contact.html" data-en="Contact">お問い合わせ</a></li>
+          <li><a href="privacy.html" data-en="Privacy Policy">プライバシーポリシー</a></li>
         </ul>
       </div>
     </div>
@@ -336,6 +343,7 @@
   </div>
 </footer>
 
+<script src="assets/js/lang.js"></script>
 <script>
   const hamburger = document.getElementById('hamburger');
   const navMobile = document.getElementById('nav-mobile');

@@ -113,7 +113,7 @@
       color: var(--gray);
     }
     .policy-meta { font-size: 13px; line-height: 2.4; color: var(--gray); }
-    .policy-meta span { display: inline-block; min-width: 5em; color: var(--ash); letter-spacing: 0.1em; }
+    .policy-meta span { display: inline-block; min-width: 5em; color: var(--black); letter-spacing: 0.1em; }
   </style>
 </head>
 <body>
@@ -125,33 +125,35 @@
       <img src="assets/logos/text.png" alt="片倉兼太郎商会" class="nav-logo-jp"/>
     </a>
     <ul class="nav-menu">
-      <li><a href="index.html">トップ</a></li>
-      <li><a href="about.html">会社概要</a></li>
-      <li><a href="history.html">歩み</a></li>
-      <li><a href="business.html">事業内容</a></li>
-      <li><a href="brand.html">ブランド</a></li>
-      <li><a href="news.html">ニュース</a></li>
-      <li><a href="contact.html" class="nav-contact">お問い合わせ</a></li>
+      <li><a href="index.html" data-en="Top">トップ</a></li>
+      <li><a href="about.html" data-en="About">会社概要</a></li>
+      <li><a href="history.html" data-en="History">歩み</a></li>
+      <li><a href="business.html" data-en="Business">事業内容</a></li>
+      <li><a href="brand.html" data-en="Brand">ブランド</a></li>
+      <li><a href="news.html" data-en="News">ニュース</a></li>
+      <li><a href="contact.html" class="nav-contact" data-en="Contact">お問い合わせ</a></li>
     </ul>
+    <button class="lang-toggle" id="lang-toggle" aria-label="Language / 言語"><span class="lt-ja">JA</span><span class="lt-dot"> · </span><span class="lt-en">EN</span></button>
     <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav-mobile" id="nav-mobile">
-    <a href="index.html">トップ</a>
-    <a href="about.html">会社概要</a>
-    <a href="history.html">歩み</a>
-    <a href="business.html">事業内容</a>
-    <a href="brand.html">ブランド</a>
-    <a href="news.html">ニュース</a>
-    <a href="contact.html">お問い合わせ</a>
+    <a href="index.html" data-en="Top">トップ</a>
+    <a href="about.html" data-en="About">会社概要</a>
+    <a href="history.html" data-en="History">歩み</a>
+    <a href="business.html" data-en="Business">事業内容</a>
+    <a href="brand.html" data-en="Brand">ブランド</a>
+    <a href="news.html" data-en="News">ニュース</a>
+    <a href="contact.html" data-en="Contact">お問い合わせ</a>
+    <button class="lang-toggle" aria-label="Language / 言語"><span class="lt-ja">JA</span><span class="lt-dot"> · </span><span class="lt-en">EN</span></button>
   </div>
 </nav>
 
 <section class="page-hero">
   <div class="page-hero-inner">
     <span class="page-hero-label">Privacy Policy</span>
-    <h1 class="page-hero-title">プライバシーポリシー</h1>
+    <h1 class="page-hero-title" data-en="Privacy Policy">プライバシーポリシー</h1>
   </div>
 </section>
 
@@ -160,8 +162,8 @@
     <div class="policy-inner">
 
       <div class="policy-block">
-        <h2 class="policy-h2">1. 基本方針</h2>
-        <p class="policy-body">
+        <h2 class="policy-h2" data-en="1. Basic Policy">1. 基本方針</h2>
+        <p class="policy-body" data-en="Katakura Kanetaro Shokai Co., Ltd. (hereinafter &quot;the Company&quot;) recognizes the protection of customers' personal information as an important responsibility and strives for proper management and protection. The Company complies with the Act on the Protection of Personal Information (Personal Information Protection Act) and other relevant laws and regulations, and handles personal information appropriately.">
           株式会社片倉兼太郎商会（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、適切な管理・保護に努めます。当社は、個人情報の保護に関する法律（個人情報保護法）およびその他の関連法令を遵守し、個人情報を適切に取り扱います。
         </p>
       </div>
@@ -169,41 +171,41 @@
       <hr class="policy-hr"/>
 
       <div class="policy-block">
-        <h2 class="policy-h2">2. 収集する個人情報</h2>
-        <p class="policy-body">当社は、お問い合わせフォームを通じて以下の個人情報を収集することがあります。</p>
+        <h2 class="policy-h2" data-en="2. Personal Information Collected">2. 収集する個人情報</h2>
+        <p class="policy-body" data-en="The Company may collect the following personal information through inquiry forms.">当社は、お問い合わせフォームを通じて以下の個人情報を収集することがあります。</p>
         <ul class="policy-list">
-          <li>お名前</li>
-          <li>メールアドレス</li>
-          <li>会社名・組織名</li>
-          <li>お問い合わせ種別</li>
-          <li>お問い合わせ内容</li>
+          <li data-en="Name">お名前</li>
+          <li data-en="Email address">メールアドレス</li>
+          <li data-en="Company / Organization name">会社名・組織名</li>
+          <li data-en="Inquiry type">お問い合わせ種別</li>
+          <li data-en="Inquiry content">お問い合わせ内容</li>
         </ul>
       </div>
 
       <hr class="policy-hr"/>
 
       <div class="policy-block">
-        <h2 class="policy-h2">3. 利用目的</h2>
-        <p class="policy-body">収集した個人情報は、以下の目的のためにのみ使用します（社内での利用に限定します）。</p>
+        <h2 class="policy-h2" data-en="3. Purpose of Use">3. 利用目的</h2>
+        <p class="policy-body" data-en="Collected personal information is used solely for the following purposes (limited to internal use).">収集した個人情報は、以下の目的のためにのみ使用します（社内での利用に限定します）。</p>
         <ul class="policy-list">
-          <li>お問い合わせへの対応・返信のため</li>
-          <li>当社サービスに関するご案内のため</li>
-          <li>当社内での業務改善・サービス向上のため</li>
+          <li data-en="To respond to and reply to inquiries">お問い合わせへの対応・返信のため</li>
+          <li data-en="To provide information regarding our services">当社サービスに関するご案内のため</li>
+          <li data-en="To improve operations and enhance services within the Company">当社内での業務改善・サービス向上のため</li>
         </ul>
       </div>
 
       <hr class="policy-hr"/>
 
       <div class="policy-block">
-        <h2 class="policy-h2">4. 第三者への提供</h2>
-        <p class="policy-body">当社は、法令に基づく場合を除き、お客様の個人情報を第三者に提供・開示することはありません。</p>
+        <h2 class="policy-h2" data-en="4. Disclosure to Third Parties">4. 第三者への提供</h2>
+        <p class="policy-body" data-en="The Company will not provide or disclose customers' personal information to third parties, except as required by law.">当社は、法令に基づく場合を除き、お客様の個人情報を第三者に提供・開示することはありません。</p>
       </div>
 
       <hr class="policy-hr"/>
 
       <div class="policy-block">
-        <h2 class="policy-h2">5. 個人情報の管理</h2>
-        <p class="policy-body">
+        <h2 class="policy-h2" data-en="5. Management of Personal Information">5. 個人情報の管理</h2>
+        <p class="policy-body" data-en="The Company takes appropriate security management measures to prevent leakage, loss, or damage of collected personal information. Access to personal information is limited to staff with business necessity, and an appropriate management system is maintained.">
           当社は、収集した個人情報の漏洩・滅失・毀損の防止のため、適切な安全管理措置を講じます。個人情報へのアクセスは、業務上必要な担当者のみに限定し、適切な管理体制を維持します。
         </p>
       </div>
@@ -211,11 +213,11 @@
       <hr class="policy-hr"/>
 
       <div class="policy-block">
-        <h2 class="policy-h2">6. 個人情報に関するお問い合わせ窓口</h2>
-        <p class="policy-body">個人情報の開示・訂正・削除・利用停止等のご要望、またはご不明な点については、下記窓口までお問い合わせください。</p>
+        <h2 class="policy-h2" data-en="6. Inquiries Regarding Personal Information">6. 個人情報に関するお問い合わせ窓口</h2>
+        <p class="policy-body" data-en="For requests regarding disclosure, correction, deletion, or suspension of use of personal information, or for any inquiries, please contact us at the following.">個人情報の開示・訂正・削除・利用停止等のご要望、またはご不明な点については、下記窓口までお問い合わせください。</p>
         <div class="policy-contact">
-          <strong>株式会社片倉兼太郎商会</strong>
-          <p>
+          <strong data-en="Katakura Kanetaro Shokai Co., Ltd.">株式会社片倉兼太郎商会</strong>
+          <p data-en="1-9-1 Yunowaki, Suwa City, Nagano 392-0002, Japan&lt;br/&gt;MAIL: &lt;a href=&quot;mailto:info@katakura-kanetaro.co.jp&quot; style=&quot;color:var(--black);&quot;&gt;info@katakura-kanetaro.co.jp&lt;/a&gt;">
             〒392-0002 長野県諏訪市湯の脇1丁目9-1<br/>
             MAIL: <a href="mailto:info@katakura-kanetaro.co.jp" style="color:var(--black);">info@katakura-kanetaro.co.jp</a>
           </p>
@@ -225,10 +227,10 @@
       <hr class="policy-hr"/>
 
       <div class="policy-block">
-        <h2 class="policy-h2">7. 制定・事業者情報</h2>
+        <h2 class="policy-h2" data-en="7. Establishment &amp; Business Information">7. 制定・事業者情報</h2>
         <div class="policy-meta">
-          <p><span>制定日</span>　2026年3月</p>
-          <p><span>事業者</span>　株式会社片倉兼太郎商会</p>
+          <p><span data-en="Established">制定日</span>　<span data-en="March 2026">2026年3月</span></p>
+          <p><span data-en="Company">事業者</span>　<span data-en="Katakura Kanetaro Shokai Co., Ltd.">株式会社片倉兼太郎商会</span></p>
         </div>
       </div>
 
@@ -247,7 +249,7 @@
     </div>
     <div class="footer-grid">
       <div>
-        <address class="footer-addr">
+        <address class="footer-addr" data-en="1-9-1 Yunowaki, Suwa City, Nagano 392-0002, Japan&lt;br/&gt;info@katakura-kanetaro.co.jp">
           〒392-0002 長野県諏訪市湯の脇1丁目9-1<br/>
           info@katakura-kanetaro.co.jp
         </address>
@@ -255,19 +257,19 @@
       <div>
         <span class="footer-nav-label">Navigation</span>
         <ul class="footer-nav-list">
-          <li><a href="index.html">トップ</a></li>
-          <li><a href="about.html">会社概要</a></li>
-          <li><a href="history.html">歩み</a></li>
-          <li><a href="business.html">事業内容</a></li>
+          <li><a href="index.html" data-en="Top">トップ</a></li>
+          <li><a href="about.html" data-en="About">会社概要</a></li>
+          <li><a href="history.html" data-en="History">歩み</a></li>
+          <li><a href="business.html" data-en="Business">事業内容</a></li>
         </ul>
       </div>
       <div>
         <span class="footer-nav-label">Other</span>
         <ul class="footer-nav-list">
-          <li><a href="brand.html">ブランド</a></li>
-          <li><a href="news.html">ニュース</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="brand.html" data-en="Brand">ブランド</a></li>
+          <li><a href="news.html" data-en="News">ニュース</a></li>
+          <li><a href="contact.html" data-en="Contact">お問い合わせ</a></li>
+          <li><a href="privacy.html" data-en="Privacy Policy">プライバシーポリシー</a></li>
         </ul>
       </div>
     </div>
@@ -277,9 +279,13 @@
   </div>
 </footer>
 
+<script src="assets/js/lang.js"></script>
 <script>
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('nav-mobile').classList.toggle('open');
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+  hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+  navMobile.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navMobile.classList.remove('open'));
   });
 </script>
 </body>
