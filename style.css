@@ -16,6 +16,7 @@
 
 /* ── RESET ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+* { -webkit-tap-highlight-color: transparent; } /* iOS タップ時の青フラッシュ除去 */
 html { scroll-behavior: smooth; }
 body {
   font-family: '游明朝', 'Yu Mincho', 'Noto Serif JP', 'Hiragino Mincho ProN', serif;
@@ -23,6 +24,8 @@ body {
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-wrap: break-word;  /* 長い英単語・URLの折り返し */
+  line-break: strict;          /* 日本語の句読点前後の不自然な改行を防ぐ */
 }
 .en { font-family: 'EB Garamond', Georgia, serif; }
 
@@ -46,6 +49,7 @@ body {
   z-index: 500;
   transition: background 0.5s, border-color 0.5s;
   border-bottom: 1px solid transparent;
+  padding-top: env(safe-area-inset-top, 0px); /* ノッチ・Dynamic Island対応 */
 }
 .site-nav.is-scrolled {
   background: rgba(253, 252, 250, 0.97);
@@ -206,7 +210,7 @@ body {
 
 /* ── PAGE HERO (sub pages) ── */
 .page-hero {
-  padding-top: 84px;
+  padding-top: calc(84px + env(safe-area-inset-top, 0px)); /* ナビ高さ + ノッチ分 */
   height: 52vh;
   min-height: 340px;
   background: var(--black);
@@ -288,6 +292,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   transition: opacity 0.25s;
+  min-height: 44px; /* タッチターゲット最小44px（Apple HIG）*/
 }
 .read-more::after {
   content: '';
@@ -304,7 +309,7 @@ body {
 .site-footer {
   background: var(--black);
   color: var(--white);
-  padding: 90px 3rem 48px;
+  padding: 90px 3rem calc(48px + env(safe-area-inset-bottom, 0px)); /* ホームバー対応 */
 }
 .footer-inner { max-width: 1080px; margin: 0 auto; }
 .footer-logo {
@@ -473,11 +478,11 @@ body {
   .footer-logo-jp { height: 36px; }
   .footer-logo > img { height: 48px; width: 48px; }
   .footer-logo-en { letter-spacing: 0.15em; font-size: 8px; } /* 長い英語社名のはみ出し防止 */
-  .page-hero { padding: 4rem 1.5rem 3rem; padding-top: calc(72px + 2rem); }
-  .page-hero-title { letter-spacing: 0.15em; }
+  .page-hero { padding: 4rem 1.5rem 3rem; padding-top: calc(72px + 2rem + env(safe-area-inset-top, 0px)); }
+  .page-hero-title { letter-spacing: 0.06em; } /* スマホで letter-spacing を大幅削減 → 変な改行防止 */
   .news-item { flex-direction: column; gap: 0.5rem; }
   .news-date { min-width: auto; }
-  .section-title { letter-spacing: 0.1em; }
-  .section-label { letter-spacing: 0.3em; }
-  .section-body { font-size: 14px; line-height: 2.2; } /* スマホで行間を詰める */
+  .section-title { letter-spacing: 0.05em; } /* スマホで削減 */
+  .section-label { letter-spacing: 0.25em; } /* スマホで削減 */
+  .section-body { font-size: 16px; line-height: 2.2; letter-spacing: 0.04em; } /* スマホ: 16px推奨・日本語letter-spacing削減 */
 }
