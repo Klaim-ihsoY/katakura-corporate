@@ -148,19 +148,23 @@ body {
 .site-nav:not(.is-scrolled) .lt-ja.active,
 .site-nav:not(.is-scrolled) .lt-en.active { color: rgba(184,144,96,0.9); }
 
-/* Mobile lang toggle inside drawer */
+/* Mobile lang toggle inside drawer — ボタンとして目立つ設計 */
 .nav-mobile .lang-toggle {
-  border: none;
-  border-bottom: 1px solid var(--ash);
-  padding: 1rem 0;
-  font-size: 12px;
-  letter-spacing: 0.25em;
-  color: var(--black);
-  margin: 0;
-  border-radius: 0;
-  justify-content: flex-start;
+  border: 1px solid rgba(184,144,96,0.45);
+  padding: 0.9rem 1.5rem;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin: 1.25rem 0 0.5rem;
+  border-radius: 1px;
+  justify-content: center;
+  background: rgba(184,144,96,0.04);
+  min-height: 48px; /* タップ領域 44px以上 */
 }
-.nav-mobile .lang-toggle:hover { border-color: var(--ash); color: var(--gray); }
+.nav-mobile .lang-toggle:hover {
+  border-color: rgba(184,144,96,0.7);
+  background: rgba(184,144,96,0.09);
+}
 
 .nav-hamburger {
   display: none;
@@ -454,6 +458,10 @@ body {
   .nav-inner > .lang-toggle { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
+/* タブレット中間余白 */
+@media (max-width: 900px) {
+  .section { padding: 90px 2rem; }
+}
 @media (max-width: 640px) {
   .section { padding: 72px 1.5rem; }
   .nav-inner { padding: 0 1.5rem; }
@@ -464,10 +472,12 @@ body {
   .footer-logo { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .footer-logo-jp { height: 36px; }
   .footer-logo > img { height: 48px; width: 48px; }
+  .footer-logo-en { letter-spacing: 0.15em; font-size: 8px; } /* 長い英語社名のはみ出し防止 */
   .page-hero { padding: 4rem 1.5rem 3rem; padding-top: calc(72px + 2rem); }
   .page-hero-title { letter-spacing: 0.15em; }
   .news-item { flex-direction: column; gap: 0.5rem; }
   .news-date { min-width: auto; }
   .section-title { letter-spacing: 0.1em; }
   .section-label { letter-spacing: 0.3em; }
+  .section-body { font-size: 14px; line-height: 2.2; } /* スマホで行間を詰める */
 }
