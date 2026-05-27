@@ -266,12 +266,13 @@
 
     @media (max-width: 900px) {
       .concept-layout, .product-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .feature-grid, .coming-grid { grid-template-columns: 1fr 1fr; }
+      .feature-grid { grid-template-columns: 1fr; } /* モバイル: 縦1列 */
+      .coming-grid { grid-template-columns: 1fr 1fr; }
       .dr-photo-col { min-height: 260px; } /* モバイルで過剰な空白を防止 */
       .product-night { direction: ltr; } /* 1カラム時はRTL不要 */
     }
     @media (max-width: 640px) {
-      .feature-grid, .coming-grid { grid-template-columns: 1fr; }
+      .coming-grid { grid-template-columns: 1fr; }
       .brand-hero-sec { padding: calc(72px + 1.5rem) 1.5rem 80px; }
       .product-visual { aspect-ratio: 4/3; max-height: 300px; } /* 正方形→横長に */
     }
