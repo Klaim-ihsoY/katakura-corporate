@@ -414,6 +414,19 @@
     })(window, document, "clarity", "script", "y46qo7iu3i");
     }
 </script>
+<script type="text/javascript">
+    // GA4計測も本番ドメインのみ（プレビュー・社内確認は除外）
+    if (location.hostname.endsWith('katakura-kanetaro.co.jp')) {
+        var gaEl = document.createElement('script');
+        gaEl.async = true;
+        gaEl.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZVNGG28WLH';
+        document.head.appendChild(gaEl);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        gtag('js', new Date());
+        gtag('config', 'G-ZVNGG28WLH');
+    }
+</script>
 </head>
 <body>
 
